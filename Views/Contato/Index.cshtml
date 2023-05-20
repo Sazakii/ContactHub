@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Lista de contatos";
+}
+
+<table class="table">
+    <div class="text-center">
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-primary" role="button" asp-controller= "Contato" asp-action= "Criar" >Adicionar Novo contato</a>
+    </div>
+    <br />
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>mdo</td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a role="button" class="btn btn-primary">Editar</a>
+                    <a role="button" class="btn btn-danger"asp asp-controller="Contato" asp-action="ApagarConfirmacao">Apagar</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>fat</td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a role= "button" class="btn btn-primary">Editar</a>
+                    <a role="button" class="btn btn-danger" asp-controller="Contato" asp-action="ApagarConfirmacao">Apagar</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>twitter</td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a role="button" class="btn btn-primary">Editar</a>
+                    <a role="button" class="btn btn-danger" asp-controller="Contato" asp-action="ApagarConfirmacao">Apagar</a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
