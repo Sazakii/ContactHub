@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/*Formata��es gerais*/
+html {
+  font-size: 14px;
+}
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-bottom: 60px;
+  font-family: "Poppins", sans-serif;
+  background: #f7f7f7;
+}
+
+
+/*Formata��es corpo do site*/
+
+.text-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #090909;
+  margin: 65px 0 65px 0;
+}
+
+.text-center #hub{
+  color: #e3aa00;
+}
+
+
+/*Section 1*/
+
+.center-btn{
+  text-align: left;
+  bottom: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+
+.center-btn a {
+  background-color: #171717;
+  color: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 400px;
+  text-decoration: none;
+  font-size: 1.3em;
+  margin-top: 35px;
+  transition: 0.5s;
+}
+
+.demo{
+    margin: 30px;
+    padding: 15px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.demo img {
+  height: 900px;
+  min-width: 100%;
+  opacity: 0.9;
+  border: 2px solid #090909b8;
+  border-radius: 10px;
+}
+
+.demo p{
+    font-size: 2.3em;
+    text-align: left;
+    max-width: 500px;
+    font-weight: 600;
+    bottom: 600px;
+    color: #090909;
+}
+
+/*Section 2*/
+
+section:nth-child(3){
+  margin-top: 330px;
+  width: 100%;
+}
+
+section:nth-child(3) h2{
+  font-weight: 600;
+  text-align: right;
+}
+
+section:nth-child(3) .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+section:nth-child(3) img{
+  height: 900px;
+  width: 105%;
+  opacity: 0.9;
+  border: 2px solid #090909b8;
+  border-radius: 10px;
+}
+
+section:nth-child(3) span{
+  color: #e3aa00;
+}
+
+/*Section 3*/
+
+  section:nth-child(4){
+    margin: 380px 0 80px 0;
+    width: 100%;
+  }
+
+  section:nth-child(4) h2{
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  section:nth-child(4) #experimentar{
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #000;
+    background-color: #ffbf00;
+    border-radius: 25px;
+    padding: 30px;
+    transition: 0.5s;
+  }
+
+  section:nth-child(4) #experimentar:hover{
+    background-color: #fff;
+    color: #e3aa00;
+    transition: 0.5s;
+  }
+  
+  section:nth-child(4) .container{
+    background-color: #171717;
+    padding: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+
+
+/*Efeitos*/
+
+.center-btn a:hover {
+  background-color: #ffbf00;
+  color: #090909;
+  transition: 0.5s;
+}
+
+.center-btn a:active {
+  scale: 0.9;
+  transition: 0.5s;
+}
+
+/*Efeito revelar container ao scrollar*/
+
+.revela{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.revela.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
+/*Media query e design responsivo*/
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1100px) {
+  .demo img, section:nth-child(3) img {
+    display: none;
+  }
+
+  .demo, .center-btn, section:nth-child(3) .container .demo-right h2{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+  }
+
+  .center-btn{
+    gap: 20px;
+  }
+
+  .demo p{
+    text-align: center;
+  }
+}
