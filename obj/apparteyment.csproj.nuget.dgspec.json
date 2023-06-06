@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\T-Gamer\\Downloads\\TCC\\apparteyment-master\\apparteyment\\apparteyment.csproj": {}
+    "G:\\TCC\\apparteyment-master\\apparteyment\\apparteyment.csproj": {}
   },
   "projects": {
-    "C:\\Users\\T-Gamer\\Downloads\\TCC\\apparteyment-master\\apparteyment\\apparteyment.csproj": {
+    "G:\\TCC\\apparteyment-master\\apparteyment\\apparteyment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\T-Gamer\\Downloads\\TCC\\apparteyment-master\\apparteyment\\apparteyment.csproj",
+        "projectUniqueName": "G:\\TCC\\apparteyment-master\\apparteyment\\apparteyment.csproj",
         "projectName": "apparteyment",
-        "projectPath": "C:\\Users\\T-Gamer\\Downloads\\TCC\\apparteyment-master\\apparteyment\\apparteyment.csproj",
+        "projectPath": "G:\\TCC\\apparteyment-master\\apparteyment\\apparteyment.csproj",
         "packagesPath": "C:\\Users\\T-Gamer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\T-Gamer\\Downloads\\TCC\\apparteyment-master\\apparteyment\\obj\\",
+        "outputPath": "G:\\TCC\\apparteyment-master\\apparteyment\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\T-Gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",

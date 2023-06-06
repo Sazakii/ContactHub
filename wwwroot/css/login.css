@@ -9,6 +9,10 @@
 }
 
 body {
+    color: #fff;
+}
+
+/* body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,9 +27,9 @@ body a {
 body p {
     color: #fff;
     font-size: 1.2em;
-}
+} */
 
-.text-center {
+/* .text-center {
     display: flex;
     align-items: center;
     justify-content: center;

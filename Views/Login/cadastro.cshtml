@@ -1,40 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script defer src="cadastro.js"></script>
-    <title>Cadastro - ContactHub</title>
-</head>
-<body>
-    <div class="text-center">
-        <h2><i class='bx bxs-coffee' ></i> Contact<span>Hub</span></h2>
-    </div>
-    
-    <div class="container">
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+<div class="login-container">
         <form action="">
             <label for="nome"><i class='bx bxs-user-circle'></i> Nome:</label>
-            <input type="text" name="" id="nome" placeholder="ex: Jonas">
+            <input type="text" name="" class="nome" placeholder="ex: Jonas">
 
             <label for="telefone"><i class='bx bxs-phone'></i> Telefone:</label>
-            <input type="number" name="" id="telefone" placeholder="(00)00000-0000">
+            <input type="text" name="" class="telefone" placeholder="(00)00000-0000">
 
             <label for="email"><i class='bx bxs-envelope'></i> E-mail:</label>
-            <input type="email" name="" id="email" placeholder="example@gmail.com">
+            <input type="email" name="" class="email" placeholder="example@gmail.com">
     
             <label for="senha"><i class='bx bxs-lock-alt'></i> Senha:</label>
-            <input type="password" name="" id="senha" placeholder="Insira a Senha">
+            <input type="password" name="" class="senha" placeholder="Insira a Senha">
 
             <label for="senhaConf"><i class='bx bxs-lock-alt'></i> Confirmar Senha:</label>
-            <input type="password" name="" id="senhaConf" placeholder="Insira a mesma Senha">
-            <p id="verificar"></p>
+            <input type="password" name="" class="senhaConf" placeholder="Insira a mesma Senha">
+
+            
 
             <input type="button" value="Cadastrar" onclick="verificarSenha(), verificarCampos()">
-        </form>
-    </div>
-    <a href="login.html" id="criar-conta">Já tenho conta</a>
 
-</body>
-</html>
+            <a asp-controller= "Login" asp-action= "Index" id="criar-conta">Já tenho conta</a>
+        </form>
+</div>
+
+
+
