@@ -287,9 +287,13 @@ table tbody i {
 /* formatação dos forms */
 
 .cadastrar-contato {
-  margin: 30px;
+  margin: 30px auto;
   margin-bottom: 140px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .cadastrar-contato h2 {

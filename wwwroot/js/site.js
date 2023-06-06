@@ -21,30 +21,30 @@ function revelar() {
 //funções para verificação dos campos
 
 function verificarSenha() {
-    let senha = document.querySelectorAll('.senha').value
-    let senhaConf = document.querySelectorAll('.senhaConf').value
-    console.log(senha,senhaConf)
+    let senha = document.querySelectorAll('.senha').value;
+    let senhaConf = document.querySelectorAll('.senhaConf').value;
+    console.log(senha,senhaConf);
 
     if(senha.length != 0) {
         if(senha == senhaConf){
-            window.alert("Senhas combinam")
+            window.alert("Senhas combinam");
         } else {
-            window.alert("Senhas não combinam")
-            senha.innerhtml = ""
-            senhaConf.innerhtml = ""
+            window.alert("Senhas não combinam");
+            senha.innerhtml = "";
+            senhaConf.innerhtml = "";
         }
     }
 }
 
 function verificarCampos() {
-    let nome = document.querySelectorAll('.nome').value
-    let telefone = document.querySelectorAll('.telefone').value
-    let email = document.querySelectorAll('.email').value
-    let senha = document.querySelectorAll('.senha').value
-    let senhaConf = document.querySelectorAll('.senhaConf').value
+    let nome = document.querySelectorAll('.nome').value;
+    let telefone = document.querySelectorAll('.telefone').value;
+    let email = document.querySelectorAll('.email').value;
+    let senha = document.querySelectorAll('.senha').value;
+    let senhaConf = document.querySelectorAll('.senhaConf').value;
 
     if (nome == 0 || telefone == 0 || email == 0 || senha == 0 || senhaConf == 0) {
-        window.alert("Preencha todos os campos.")
+        window.alert("Preencha todos os campos.");
     }
 }
 

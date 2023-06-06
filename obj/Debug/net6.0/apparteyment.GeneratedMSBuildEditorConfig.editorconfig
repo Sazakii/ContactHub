@@ -5,77 +5,76 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = apparteyment
 build_property.RootNamespace = apparteyment
-build_property.ProjectDir = G:\TCC\apparteyment-master\apparteyment\
+build_property.ProjectDir = F:\TCC\apparteyment-master\apparteyment\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = G:\TCC\apparteyment-master\apparteyment
+build_property.MSBuildProjectDirectory = F:\TCC\apparteyment-master\apparteyment
 build_property._RazorSourceGeneratorDebug = 
 
-[G:/TCC/apparteyment-master/apparteyment/Views/Contato/ApagarConfirmacao.cshtml]
+[F:/TCC/apparteyment-master/apparteyment/Views/Contato/ApagarConfirmacao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xBcGFnYXJDb25maXJtYWNhby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/TCC/apparteyment-master/apparteyment/Views/Contato/Criar.cshtml]
+[F:/TCC/apparteyment-master/apparteyment/Views/Contato/Criar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xDcmlhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/TCC/apparteyment-master/apparteyment/Views/Contato/Editar.cshtml]
+[F:/TCC/apparteyment-master/apparteyment/Views/Contato/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/TCC/apparteyment-master/apparteyment/Views/Contato/Index.cshtml]
+[F:/TCC/apparteyment-master/apparteyment/Views/Contato/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/TCC/apparteyment-master/apparteyment/Views/Conta/EditarConta.cshtml]
+[F:/TCC/apparteyment-master/apparteyment/Views/Conta/EditarConta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFcRWRpdGFyQ29udGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/TCC/apparteyment-master/apparteyment/Views/Conta/Index.cshtml]
+[F:/TCC/apparteyment-master/apparteyment/Views/Conta/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/TCC/apparteyment-master/apparteyment/Views/Home/Index.cshtml]
+[F:/TCC/apparteyment-master/apparteyment/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/TCC/apparteyment-master/apparteyment/Views/Home/Logado.cshtml]
+[F:/TCC/apparteyment-master/apparteyment/Views/Home/Logado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dhZG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/TCC/apparteyment-master/apparteyment/Views/Home/Privacy.cshtml]
+[F:/TCC/apparteyment-master/apparteyment/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/TCC/apparteyment-master/apparteyment/Views/Login/Cadastro.cshtml]
+[F:/TCC/apparteyment-master/apparteyment/Views/Login/Cadastro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ2FkYXN0cm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/TCC/apparteyment-master/apparteyment/Views/Login/Index.cshtml]
+[F:/TCC/apparteyment-master/apparteyment/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/TCC/apparteyment-master/apparteyment/Views/Shared/Error.cshtml]
+[F:/TCC/apparteyment-master/apparteyment/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/TCC/apparteyment-master/apparteyment/Views/Shared/_ValidationScriptsPartial.cshtml]
+[F:/TCC/apparteyment-master/apparteyment/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/TCC/apparteyment-master/apparteyment/Views/_ViewImports.cshtml]
+[F:/TCC/apparteyment-master/apparteyment/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/TCC/apparteyment-master/apparteyment/Views/_ViewStart.cshtml]
+[F:/TCC/apparteyment-master/apparteyment/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/TCC/apparteyment-master/apparteyment/Views/Shared/_Layout.cshtml]
+[F:/TCC/apparteyment-master/apparteyment/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-z40cucymr0
