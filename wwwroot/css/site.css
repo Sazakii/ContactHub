@@ -340,7 +340,7 @@ form input[type="email"]::placeholder, input[type="password"]::placeholder, inpu
  text-align: left;
 }
 
-form input[type="button"] {
+form input[type="submit"] {
   background-color: rgb(238, 155, 0);
   font-size: 1.01em;
   font-weight: 600;
@@ -354,7 +354,7 @@ form input[type="button"] {
   transition: 0.3s ease;
 }
 
-form input[type="button"]:hover {
+form input[type="submit"]:hover {
   scale: 1.05;
   transition: 0.3s ease;
 }

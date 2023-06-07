@@ -16,36 +16,74 @@ function revelar() {
         //     revelas[i].classList.remove('active');
         // }
     }
-}
+} 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //funções para verificação dos campos
 
-function verificarSenha() {
-    let senha = document.querySelectorAll('.senha').value;
-    let senhaConf = document.querySelectorAll('.senhaConf').value;
-    console.log(senha,senhaConf);
+// Obtém referências para os elementos de senha e confirmar senha
+const senhaInputs = document.querySelectorAll('.senha');
+const confirmarSenhaInputs = document.querySelectorAll('.senhaConf');
+const submitButtons = document.querySelectorAll('.submitBtn');
+const mensagemErro = document.querySelector('#mensagem-erro');
 
-    if(senha.length != 0) {
-        if(senha == senhaConf){
-            window.alert("Senhas combinam");
-        } else {
-            window.alert("Senhas não combinam");
-            senha.innerhtml = "";
-            senhaConf.innerhtml = "";
-        }
+// Função para verificar as senhas em tempo real
+function verificarSenhas() {
+  let todasAsSenhasIguais = true;
+
+  // Itera sobre os campos de senha e confirmar senha
+  for (let i = 0; i < senhaInputs.length; i++) {
+    const senha = senhaInputs[i].value;
+    const confirmarSenha = confirmarSenhaInputs[i].value;
+
+    // Verifica se as senhas são idênticas
+    if (senha !== confirmarSenha || senha === '') {
+      todasAsSenhasIguais = false;
+        mensagemErro.textContent = 'Senhas não combinam';
+        mensagemErro.style.color = 'red';
+      break;
+    } else {
+        mensagemErro.textContent = 'Senhas combinam';
+        mensagemErro.style.color = 'green';
     }
+  }
+
+  // Habilita ou desabilita todos os botões de envio
+  submitButtons.forEach((button) => {
+    button.disabled = !todasAsSenhasIguais;
+  });
 }
 
-function verificarCampos() {
-    let nome = document.querySelectorAll('.nome').value;
-    let telefone = document.querySelectorAll('.telefone').value;
-    let email = document.querySelectorAll('.email').value;
-    let senha = document.querySelectorAll('.senha').value;
-    let senhaConf = document.querySelectorAll('.senhaConf').value;
+// Desabilita todos os botões de envio no início
+submitButtons.forEach((button) => {
+  button.disabled = true;
+});
 
-    if (nome == 0 || telefone == 0 || email == 0 || senha == 0 || senhaConf == 0) {
-        window.alert("Preencha todos os campos.");
-    }
-}
+// Adiciona um ouvinte de evento 'input' para os campos de senha e confirmar senha
+senhaInputs.forEach((input) => {
+  input.addEventListener('input', verificarSenhas);
+});
+
+confirmarSenhaInputs.forEach((input) => {
+  input.addEventListener('input', verificarSenhas);
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 
