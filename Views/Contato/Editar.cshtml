@@ -15,10 +15,16 @@
 
             <h3 class="hub">Telefone</h3>
             <p>Telefone do Contato</p>
+
+            <h3 class="hub">Email</h3>
+            <p>Email do Contato</p>
         </div>
 
         <label for="nome"><i class='bx bxs-user-circle'></i> Editar Nome do Contato:</label>
         <input type="text" name="" class="nome" placeholder="ex: Jonas">
+
+        <label for="email"><i class='bx bxs-envelope'></i> Editar E-mail do Contato:</label>
+        <input type="text" name="" class="email" placeholder="example@gmail.com">
 
         <label for="telefone"><i class='bx bxs-phone'></i> Editar Telefone:</label>
         <input type="text" name="" class="telefone" placeholder="(00)00000-0000">
@@ -27,7 +33,7 @@
 
         <div class="edit-btns">
             <a role= "button" class="cancelar-btn" asp-controller="Contato" asp-action="Index">Cancelar</a>
-            <input type="button" value="Editar Contato">
+            <input type="submit" value="Editar Contato">
         </div>
     </form>
 </div>
