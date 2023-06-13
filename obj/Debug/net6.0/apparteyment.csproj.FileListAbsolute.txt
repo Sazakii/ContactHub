@@ -1,8 +1,0 @@
-G:\TCC\apparteyment-master\obj\Debug\net6.0\apparteyment.csproj.AssemblyReference.cache
-G:\TCC\apparteyment-master\obj\Debug\net6.0\apparteyment.GeneratedMSBuildEditorConfig.editorconfig
-G:\TCC\apparteyment-master\obj\Debug\net6.0\apparteyment.AssemblyInfoInputs.cache
-G:\TCC\apparteyment-master\obj\Debug\net6.0\apparteyment.AssemblyInfo.cs
-G:\TCC\apparteyment-master\obj\Debug\net6.0\apparteyment.csproj.CoreCompileInputs.cache
-G:\TCC\apparteyment-master\obj\Debug\net6.0\apparteyment.MvcApplicationPartsAssemblyInfo.cache
-G:\TCC\apparteyment-master\obj\Debug\net6.0\apparteyment.RazorAssemblyInfo.cache
-G:\TCC\apparteyment-master\obj\Debug\net6.0\apparteyment.RazorAssemblyInfo.cs
