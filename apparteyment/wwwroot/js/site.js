@@ -21,11 +21,45 @@ function revelar() {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 window.onload = function() {
-  // Obtém todos os campos de telefone e e-mail e o botão de envio do site
+  // Obtém todos os campos de telefone
   var telefoneInputs = document.querySelectorAll('.telefone');
-  var emailInputs = document.querySelectorAll('input[type="email"]');
-  var submitButton = document.querySelector('button[type="submit"]');
+
+  // Obtém todos os campos de e-mail
+  var emailInputs = document.querySelectorAll('.email');
+
+  // Obtém todos os campos de nome
+  var nomeInputs = document.querySelectorAll('.nome');
+
+  // Obtém o botão de envio
+  var submitButton = document.querySelector('.submit');
+
+  // Obtém a mensagem de erro
   var errorMessageElement = document.getElementById('mensagem-erro');
+
+  // Define a função de validação do campo de telefone
+  function validateTelefone() {
+    var telefone = this.value;
+    var submitEnabled = false;
+    var errorMessage = "";
+
+    // Remove todos os caracteres não numéricos do telefone
+    telefone = telefone.replace(/\D/g, '');
+
+    // Formata o telefone como (00)00000-0000
+    telefone = telefone.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1)$2-$3');
+
+    // Atualiza o valor do campo de telefone
+    this.value = telefone;
+
+    // Verifica se o telefone tem o número máximo de caracteres
+    if (telefone.length === 14) {
+      submitEnabled = true;
+    }
+
+    // Define a mensagem de erro e o estado do botão de envio
+    errorMessageElement.textContent = errorMessage;
+    submitButton.disabled = !submitEnabled;
+  }
 
   // Define a função de validação do campo de e-mail
   function validateEmail() {
@@ -34,15 +68,10 @@ window.onload = function() {
     var errorMessage = "";
 
     // Verifica se o e-mail contém "@" seguido de "gmail.com" ou "outlook.com"
-    if (email.includes("@")) {
-      var domain = email.split("@")[1];
-      if (domain === "gmail.com" || domain === "outlook.com") {
-        submitEnabled = true;
-      } else {
-        errorMessage = "Por favor, insira um e-mail válido (gmail.com ou outlook.com).";
-      }
+    if (/@(gmail|outlook)\.com$/.test(email)) {
+      submitEnabled = true;
     } else {
-      errorMessage = "Por favor, insira um e-mail válido.";
+      errorMessage = "Por favor, adicione um e-mail válido (gmail.com ou outlook.com).";
     }
 
     // Define a mensagem de erro e o estado do botão de envio
@@ -50,57 +79,46 @@ window.onload = function() {
     submitButton.disabled = !submitEnabled;
   }
 
-  // Define a função de formatação do campo de telefone
-  function formatTelefone() {
-    var telefone = this.value;
-    var formattedTelefone = "";
+  // Define a função de validação do campo de nome
+function validateNome() {
+  var nome = this.value;
+  var submitEnabled = false;
+  var errorMessage = "";
 
-    // Remove todos os caracteres não numéricos do telefone
-    telefone = telefone.replace(/\D/g, "");
+  // Remove espaços em branco do início e do fim do nome
+  nome = nome.trim();
 
-    // Limita o número máximo de caracteres para (00)00000-0000
-    telefone = telefone.substring(0, 11);
-
-    // Formata o telefone
-    if (telefone.length > 0) {
-      formattedTelefone = "(" + telefone.substring(0, 2);
-    }
-    if (telefone.length > 2) {
-      formattedTelefone += ")" + telefone.substring(2, 7);
-    }
-    if (telefone.length > 7) {
-      formattedTelefone += "-" + telefone.substring(7, 11);
-    }
-
-    // Atualiza o valor do campo de telefone
-    this.value = formattedTelefone;
-
-    // Verifica se o número máximo de caracteres foi alcançado
-    var errorMessage = "";
-    if (telefone.length < 11) {
-      errorMessage = "Por favor, complete o preenchimento do número.";
-    }
-    errorMessageElement.textContent = errorMessage;
+  // Limita o nome a um máximo de 20 caracteres
+  if (nome.length > 20) {
+    nome = nome.substring(0, 20);
+    this.value = nome;
   }
+
+  // Verifica se o nome contém apenas letras
+  if (/^[A-Za-z]+$/.test(nome)) {
+    submitEnabled = true;
+  } else {
+    errorMessage = "Por favor, adicione um nome válido (apenas letras).";
+  }
+
+  // Define a mensagem de erro e o estado do botão de envio
+  errorMessageElement.textContent = errorMessage;
+  submitButton.disabled = !submitEnabled;
+}
 
   // Adiciona um ouvinte de evento de entrada para cada campo de telefone
   for (var i = 0; i < telefoneInputs.length; i++) {
-    telefoneInputs[i].addEventListener('input', formatTelefone);
-    telefoneInputs[i].addEventListener('keydown', function(e) {
-      // Permite a tecla Backspace e Delete
-      if (e.key === 'Backspace' || e.key === 'Delete') {
-        return;
-      }
-      // Impede a digitação de caracteres especiais e espaços
-      if (e.key.length === 1 && !/[0-9]/.test(e.key)) {
-        e.preventDefault();
-      }
-    });
+    telefoneInputs[i].addEventListener('input', validateTelefone);
   }
 
   // Adiciona um ouvinte de evento de entrada para cada campo de e-mail
   for (var i = 0; i < emailInputs.length; i++) {
     emailInputs[i].addEventListener('input', validateEmail);
+  }
+
+  // Adiciona um ouvinte de evento de entrada para cada campo de nome
+  for (var i = 0; i < nomeInputs.length; i++) {
+    nomeInputs[i].addEventListener('input', validateNome);
   }
 };
 

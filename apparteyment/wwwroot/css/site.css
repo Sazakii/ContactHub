@@ -359,6 +359,12 @@ form input[type="submit"]:hover {
   transition: 0.3s ease;
 }
 
+form p {
+  margin: 5px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.301);
+}
+
 .login-container{
   display: flex;
   align-items: center;
