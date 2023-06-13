@@ -323,7 +323,7 @@ form label {
   font-size: 1.4em;
 }
 
-form input[type="email"], input[type="password"], input[type="text"] {
+form input[type="email"], input[type="password"], input[type="text"], input[type="tel"] {
   height: 50px;
   padding: 30px;
   width: 100%;
@@ -334,7 +334,7 @@ form input[type="email"], input[type="password"], input[type="text"] {
   background-color: #171717;
 }
 
-form input[type="email"]::placeholder, input[type="password"]::placeholder, input[type="text"]::placeholder {
+form input[type="email"]::placeholder, input[type="password"]::placeholder, input[type="text"]::placeholder, input[type="tel"]::placeholder {
  color: rgba(255, 166, 0, 0.705);
  opacity: 0.6;
  text-align: left;

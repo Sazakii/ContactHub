@@ -19,68 +19,98 @@ function revelar() {
 } 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//funções para verificação dos campos
+window.onload = function() {
+  var telefoneInputs = document.querySelectorAll(".telefone");
 
-// Obtém referências para os elementos de senha e confirmar senha
-const senhaInputs = document.querySelectorAll('.senha');
-const confirmarSenhaInputs = document.querySelectorAll('.senhaConf');
-const submitButtons = document.querySelectorAll('.submitBtn');
-const mensagemErro = document.querySelector('#mensagem-erro');
+  telefoneInputs.forEach(function(telefoneInput) {
+    telefoneInput.addEventListener("input", function() {
+      formataTelefone(telefoneInput);
+    });
+  });
 
-// Função para verificar as senhas em tempo real
-function verificarSenhas() {
-  let todasAsSenhasIguais = true;
+  function formataTelefone(input) {
+    var telefone = input.value;
+    telefone = telefone.replace(/\D/g, ""); // Remove todos os caracteres não numéricos
 
-  // Itera sobre os campos de senha e confirmar senha
-  for (let i = 0; i < senhaInputs.length; i++) {
-    const senha = senhaInputs[i].value;
-    const confirmarSenha = confirmarSenhaInputs[i].value;
-
-    // Verifica se as senhas são idênticas
-    if (senha !== confirmarSenha || senha === '') {
-      todasAsSenhasIguais = false;
-        mensagemErro.textContent = 'Senhas não combinam';
-        mensagemErro.style.color = 'red';
-      break;
-    } else {
-        mensagemErro.textContent = 'Senhas combinam';
-        mensagemErro.style.color = 'green';
+    // Limita o número de caracteres do telefone
+    if (telefone.length > 11) {
+      telefone = telefone.slice(0, 11);
     }
+
+    // Aplica a formatação (exemplo: (12) 34567-8901)
+    var formattedTelefone = "(" + telefone.substring(0, 2) + ") " + telefone.substring(2, 7) + "-" + telefone.substring(7, 11);
+
+    // Atualiza o valor do input com a formatação
+    input.value = formattedTelefone;
   }
 
-  // Habilita ou desabilita todos os botões de envio
-  submitButtons.forEach((button) => {
-    button.disabled = !todasAsSenhasIguais;
+  telefoneInputs.forEach(function(telefoneInput) {
+    telefoneInput.addEventListener("keydown", function(event) {
+      // Impede o uso da barra de espaço
+      if (event.keyCode === 32) {
+        event.preventDefault();
+      }
+    });
+
+    telefoneInput.addEventListener("input", function(event) {
+      // Limita o número máximo de caracteres (14)
+      var telefone = telefoneInput.value.replace(/\D/g, ""); // Remove todos os caracteres não numéricos
+
+      if (telefone.length > 14) {
+        telefoneInput.value = telefoneInput.value.slice(0, 14);
+      }
+    });
   });
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Obtém referências para os elementos do formulário
+const form = document.querySelector('#cadastro-form');
+const inputs = form.querySelectorAll('.campo');
+const senhaInput = form.querySelector('.senha');
+const confirmarSenhaInput = form.querySelector('.senhaConf');
+const submitButton = form.querySelector('.submitBtn');
+const mensagemErro = form.querySelector('#mensagem-erro');
+
+// Função para verificar se todos os campos estão preenchidos e as senhas coincidem
+function verificarFormulario() {
+  let todosPreenchidos = true;
+  let senhasCoincidem = senhaInput.value === confirmarSenhaInput.value;
+
+  inputs.forEach((input) => {
+    if (input.value === '') {
+      todosPreenchidos = false;
+      return;
+    }
+  });
+
+  if (todosPreenchidos && senhasCoincidem) {
+    submitButton.disabled = false;
+    mensagemErro.textContent = '';
+  } else {
+    submitButton.disabled = true;
+
+    if (!todosPreenchidos) {
+      mensagemErro.textContent = 'Preencha todos os campos';
+    } else if (!senhasCoincidem) {
+      mensagemErro.textContent = 'As senhas não coincidem';
+    }
+
+    mensagemErro.style.color = 'red';
+  }
 }
 
-// Desabilita todos os botões de envio no início
-submitButtons.forEach((button) => {
-  button.disabled = true;
+// Adiciona um ouvinte de evento 'input' para cada campo do formulário
+inputs.forEach((input) => {
+  input.addEventListener('input', verificarFormulario);
 });
 
-// Adiciona um ouvinte de evento 'input' para os campos de senha e confirmar senha
-senhaInputs.forEach((input) => {
-  input.addEventListener('input', verificarSenhas);
-});
+senhaInput.addEventListener('input', verificarFormulario);
+confirmarSenhaInput.addEventListener('input', verificarFormulario);
 
-confirmarSenhaInputs.forEach((input) => {
-  input.addEventListener('input', verificarSenhas);
-});
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
+// Verificar formulário ao carregar a página
+window.addEventListener('DOMContentLoaded', verificarFormulario);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
