@@ -21,47 +21,47 @@ function revelar() {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 window.onload = function() {
-  var telefoneInputs = document.querySelectorAll(".telefone");
+  // Função para formatar telefones
+  function formatarTelefones() {
+    const telefones = document.getElementsByClassName('telefone');
 
-  telefoneInputs.forEach(function(telefoneInput) {
-    telefoneInput.addEventListener("input", function() {
-      formataTelefone(telefoneInput);
-    });
-  });
+    for (let i = 0; i < telefones.length; i++) {
+      const telefone = telefones[i];
 
-  function formataTelefone(input) {
-    var telefone = input.value;
-    telefone = telefone.replace(/\D/g, ""); // Remove todos os caracteres não numéricos
+      telefone.addEventListener('input', function() {
+        const input = this;
+        let valor = input.value;
 
-    // Limita o número de caracteres do telefone
-    if (telefone.length > 11) {
-      telefone = telefone.slice(0, 11);
+        // Remove todos os caracteres não numéricos
+        valor = valor.replace(/\D/g, '');
+
+        // Limita o tamanho máximo do input
+        valor = valor.slice(0, 11);
+
+        // Formatação do telefone (00)00000-0000
+        let formattedValue = '';
+        let counter = 0;
+
+        for (let j = 0; j < valor.length; j++) {
+          if (j === 0) {
+            formattedValue += '(';
+          } else if (j === 2) {
+            formattedValue += ') ';
+          } else if (j === 7) {
+            formattedValue += '-';
+          }
+
+          formattedValue += valor[j];
+          counter++;
+        }
+
+        input.value = formattedValue;
+      });
     }
-
-    // Aplica a formatação (exemplo: (12) 34567-8901)
-    var formattedTelefone = "(" + telefone.substring(0, 2) + ") " + telefone.substring(2, 7) + "-" + telefone.substring(7, 11);
-
-    // Atualiza o valor do input com a formatação
-    input.value = formattedTelefone;
   }
 
-  telefoneInputs.forEach(function(telefoneInput) {
-    telefoneInput.addEventListener("keydown", function(event) {
-      // Impede o uso da barra de espaço
-      if (event.keyCode === 32) {
-        event.preventDefault();
-      }
-    });
-
-    telefoneInput.addEventListener("input", function(event) {
-      // Limita o número máximo de caracteres (14)
-      var telefone = telefoneInput.value.replace(/\D/g, ""); // Remove todos os caracteres não numéricos
-
-      if (telefone.length > 14) {
-        telefoneInput.value = telefoneInput.value.slice(0, 14);
-      }
-    });
-  });
+  // Chama a função para formatar telefones
+  formatarTelefones();
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
