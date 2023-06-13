@@ -2,9 +2,38 @@
     ViewData["Title"] = "Editar Contatos";
 }
 
-<table class="table">
-    <div class="text-center">
+<div class="editar-contato">
+    <h2>Editar Contato</h2>
 
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <a class="btn btn-primary" role="button">Adicionar Novo contato</a>
+    <form id="editar-form" action="">
+
+        <div class="contato-info">
+            <i class='bx bxs-user-circle'></i>
+
+            <h3 class="hub">Nome</h3>
+            <p>Nome do Contato</p>
+
+            <h3 class="hub">Telefone</h3>
+            <p>Telefone do Contato</p>
+
+            <h3 class="hub">Email</h3>
+            <p>Email do Contato</p>
         </div>
+
+        <label for="nome"><i class='bx bxs-user-circle'></i> Editar Nome do Contato:</label>
+        <input type="text" name="" class="nome" placeholder="ex: Jonas">
+
+        <label for="email"><i class='bx bxs-envelope'></i> Editar E-mail do Contato:</label>
+        <input type="text" name="" class="email" placeholder="example@gmail.com">
+
+        <label for="telefone"><i class='bx bxs-phone'></i> Editar Telefone:</label>
+        <input type="text" name="" class="telefone" placeholder="(00)00000-0000">
+
+        <p>Se o espaço estiver em branco, não haverá alterações nele.</p>
+
+        <div class="edit-btns">
+            <a role= "button" class="cancelar-btn" asp-controller="Contato" asp-action="Index">Cancelar</a>
+            <input type="submit" value="Editar Contato">
+        </div>
+    </form>
+</div>

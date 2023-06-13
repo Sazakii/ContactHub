@@ -12,10 +12,10 @@
 
     <div class="demo">
         <div class="demo-left">
-            <p>Aqui você pode salvar seus contatos e conversar com segurança e privacidade</p>
+            <p>Aqui você pode salvar seus contatos com <span class="hub">segurança</span> e <span class="hub">privacidade</span></p>
             <div class="center-btn">
-                <a href="">Login</a>
-                <a href="">Cadastrar</a>
+                <a role="button" asp-controller="Login" asp-action="Index">Login</a>
+                <a role="button" asp-controller= "Login" asp-action= "Cadastro">Cadastrar</a>
             </div>
         </div>
 
@@ -33,9 +33,19 @@
         </div>
 
         <div class="demo-right">
-            <h2>Registre seus contatos de um <span>jeito fácil</span></h2>
+            <h2>Registre seus contatos e se <span class="hub">organize</span> de um <span>jeito fácil</span></h2>
         </div>
     </div>
+</section>
+
+<section>
+    <div class="container revela">
+
+        <i class='bx bxs-lock'></i>
+        <h2>Salve seus contatos com segurança com nosso sistema e tenha <span class="hub">privacidade</span></h2>
+
+    </div>
+
 </section>
 
 <section>
@@ -44,6 +54,8 @@
         <a href="#" id="experimentar">Experimente Agora</a>
     </div>
 </section>
+
+
 
 
 
